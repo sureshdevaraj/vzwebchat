@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Verizon Support-ChatBot</title>
+        <link href="botchat.css" rel="stylesheet" />
+        <style>
+            .wc-chatview-panel {
+                width: 320px;
+                height: 500px;
+                position: relative;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div style="width:320px; float:left;">
+                <h1>Config</h1>
+                <form method="post" action=".">
+                    <p>
+                        <label for="secret">App Secret</label>
+                        <input id="secret" name="secret" type="text" style="width:300px;" value="<%= secret %>" placeholder="leave blank for TestBotV3"/>
+                    </p>
+                    <p>
+                        <input type="submit"/>
+                    </p>
+                </form>
+<!--                
+                <h1>Backchannel</h1>
+                <textarea id="message" rows="5" cols="40"></textarea>
+                <button onclick="sendMessage(document.getElementById('message').value)">Send Message To Bot</button>
+-->
+            </div>
+            <div style="margin-left: 320px" id="BotChatGoesHere"/>
+            <div style="clear:both;"/>
+        </div>
+        <h2>Please report any issues with botchat on <a href="https://github.com/billba/botchat/issues">github</a></h2>
+        <script src="botchat.js"></script>
+        <script>
+            BotChat.App({
+                directLine: {
+                    token: "<%= token %>"
+                },
+                user: { id: 'botchattest' },
+                bot: { id: 'yourbot' },
+            }, document.getElementById("BotChatGoesHere"));
+        </script>
+    </body>
+</html>
