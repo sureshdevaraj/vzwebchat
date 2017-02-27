@@ -9,7 +9,9 @@
   },
   "main": "index.js",
   "scripts": {
-  
+   "build": "tsc",
+    "watch": "tsc -w",
+    "nodewatch": "nodemon index.js",
     "start": "node index.js"
   },
   "dependencies": {
