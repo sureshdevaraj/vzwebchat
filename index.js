@@ -18,7 +18,7 @@ app.post('/', (req, res) => {
     res.redirect('/');
 });
 app.get('/', (req, res) => {
-    const appSecret = (req.cookies.settings && req.cookies.settings.secret) || process.env.APP_SECRET;
+    const appSecret ='8-9_vtV_0Bw.cwA.ty8.lwNNtHfAJSmjOokhNOBe4L6IGpkD02lYsQTDxs-0Go4';// (req.cookies.settings && req.cookies.settings.secret) || process.env.APP_SECRET;
     const endpoint = 'https://directline.botframework.com/v3/directline/tokens/generate';
     const auth = 'Bearer';
     fetch(endpoint, {
