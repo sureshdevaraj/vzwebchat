@@ -31,8 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="botchat.js" />
-    <Compile Include="index.js" />
-    <Compile Include="server.js" />
+    <Compile Include="index.js" />    
     <Content Include="app.json" />
     <Content Include="botchat.css" />
     <Content Include="index.ejs" />
