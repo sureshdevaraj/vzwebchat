@@ -14,11 +14,11 @@ const guid = () => {
     const s4 = () => Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
     return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
 };
-app.post('/', (req, res) => {
+app.post('/webchat', (req, res) => {
     res.cookie('settings', req.body);
-    res.redirect('/');
+    res.redirect('/webchat');
 });
-app.get('/', (req, res) => {
+app.get('/webchat', (req, res) => {
     const appSecret ='8-9_vtV_0Bw.cwA.ty8.lwNNtHfAJSmjOokhNOBe4L6IGpkD02lYsQTDxs-0Go4';// (req.cookies.settings && req.cookies.settings.secret) || process.env.APP_SECRET;
     const endpoint = 'https://directline.botframework.com/v3/directline/tokens/generate';
     const auth = 'Bearer';
